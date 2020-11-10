@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const config = require('./config/config.json') //llamamos al archivo de configuracion
+const config = require('./config/config.js') //llamamos al archivo de configuracion
 
 //funcion para el estado del bot
 function estadoDelBot(){

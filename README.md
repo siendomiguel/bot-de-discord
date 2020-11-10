@@ -1,7 +1,7 @@
 ## Este es un Bot para Discord
 
-- Para utilizarlo, solo debes descargar el codigo y agregarlo a un servidor o ejecutar desde tu terminal, instalar los modulos y paquetes necesarios.
-- Luego crear un archivo config.json y agregar su TOKEN y PREFIX.
+- Para utilizarlo, solo debes descargar el codigo y agregarlo a un servidor o ejecutar desde tu terminal, instalar los modulos y paquetes necesarios. (package.json, Discord.js,  package fs)
+- Luego crear un archivo config.js y agregar su TOKEN y PREFIX.
 
 ### Contactame por mis redes sociales
 
