@@ -39,12 +39,17 @@ if( command === 'ayuda'){
 if(command === 'kick'){
     let mencionado = message.mentions.users.first();
     let razon = args.slice(1).join(' ');
+    
+    let perms = message.member.hasPermission("MANAGE_ROLES");
 
     if(!mencionado) return message.channel.send('Mencione a un usuario');
     if(!razon) return message.channel.send('Debe escribir una razon para expulsar al usuario\n\n**Ejemplo:** -kick @usuariomencionado El usuario ha roto las reglas del servidor');
 
     message.guild.member(mencionado).kick(razon);
     message.channel.send(`El usuario :point_right_tone3: **${mencionado.tag}** fue expulsado del servidor.\n\n**Razón: **${razon}`)
+
+    message.delete();
+
 }
 
 //Banear a un usuario
@@ -52,11 +57,16 @@ if(command === 'ban'){
     let mencionado = message.mentions.users.first();
     let razon = args.slice(1).join(' ');
 
+    let perms = message.member.hasPermission("MANAGE_ROLES");
+
     if(!mencionado) return message.channel.send('Mencione a un usuario');
     if(!razon) return message.channel.send('Debe escribir una razon para banear al usuario.\n\n**Ejemplo:** -ban @usuariomencionado El usuario ha roto las reglas del servidor');
 
     message.guild.member(mencionado).ban(razon);
     message.channel.send(`El usuario :point_right_tone3: **${mencionado.tag}** fue baneado del servidor.\n\n**Razón: **${razon}`)
+
+    message.delete();
+
 }
 
 //Agregar rol de usuario
@@ -74,6 +84,9 @@ if(command === 'arol'){
 
     miembro.roles.add(role).catch(console.error);
     message.channel.send(`El rol **${role.name}** fue agregado a **${miembro.user.username}**.`);
+
+    message.delete();
+
 }
 
 //Eliminar rol de usuario
@@ -91,6 +104,8 @@ if(command === 'erol'){
 
     miembro.roles.remove(role).catch(console.error);
     message.channel.send(`El rol **${role.name}** fue eliminado de **${miembro.user.username}**.`);
+
+    message.delete();
 
     
 }
