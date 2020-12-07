@@ -4,7 +4,7 @@
   "description": "Este es mi primer bot modular",
   "main": "mybot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node mybot.js"
   },
   "keywords": [],
   "author": "",
