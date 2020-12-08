@@ -32,7 +32,7 @@ const args = message.content.slice(prefix.length).trim().split(' ');
 const command = args.shift().toLocaleLowerCase();
 
 if( command === 'ayuda'){
-    message.channel.send('Lo siento, Este bot aun esta en fase BETA!! :pensive: ').then(msg => msg.delete({timeout: 3000}));;
+    message.channel.send('Hola :wave: Lo siento, por ahora no puedo ayudarte, Este bot aun esta en fase BETA!! :pensive: ').then(msg => msg.delete({timeout: 3000}));;
 
     message.delete();
 }
@@ -109,9 +109,15 @@ if(command === 'erol'){
     message.channel.send(`El rol **${role.name}** fue eliminado de **<@${miembro.id}>**.`);
 
     message.delete();
-
-    
 }
+
+if(command === 'hola'){
+    message.channel.send('Hola :wave::grin:').then(msg => msg.delete({timeout: 3000}));;
+
+    message.delete();
+
+}
+
 
 });
 

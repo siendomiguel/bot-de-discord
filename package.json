@@ -1,6 +1,6 @@
 {
-  "name": "mibotmodular",
-  "version": "1.0.0",
+  "name": "bot-de-discord",
+  "version": "1.1.0",
   "description": "Este es mi primer bot modular",
   "main": "mybot.js",
   "scripts": {
